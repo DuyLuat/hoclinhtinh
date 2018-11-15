@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="#" method="POST" role="form">
+        <legend>Form title</legend>
+
+        <div class="form-group">
+            <label for="">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Input field">
+        </div>
+
+        <div class="form-group">
+            <label for="">Age</label>
+            <input type="number" class="form-control" id="age" placeholder="Input field">
+        </div>
+
+        <div class="form-group">
+            <label for="">Gender</label>
+            <select type="text" class="form-control" id="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+        </div>
+
+
+        <button type="submit" class="btn btn-primary" onclick="event.preventDefault(); onClick()">Submit</button>
+    </form>
+    <div id="result"></div>
+
+
+</body>
+
+</html>
+<script>
+    function onClick() {
+        var name = document.getElementById('name').value;
+        var age = document.getElementById('age').value;
+        var gender = document.getElementById('gender').value;
+        var result = document.getElementById('result');
+        var resulthtml = '<p> Name: ' + name + '</p>' + '<p> Age: ' + age + '</p>' + '<p>Gender:' + gender + '</p>';
+        result.innerHTML = resulthtml;
+
+    }
+</script>

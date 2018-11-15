@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Coders.Tokyo</title>
+</head>
+
+<body>
+    <h1>To do List</h1>
+
+    <input type="text" id="addWork">
+    <button id="add" onclick="addWork()">Add Work</button>
+
+    <ul id="toDoList">
+        <!-- <li>1. Ăn sáng</li>
+        <li>2. Ăn trưa</li>
+        <li>3. Ăn tối</li> -->
+    </ul>
+
+    <script>
+        var toDoList = [];
+        function render(x) {
+            var list = document.getElementById('toDoList');
+            var tmp = '';
+
+            for (var i = 0; i < x.length; i++) {
+
+                tmp += '<li style="list-style-type:none" onclick="removeItem(' + i + ')"><b>' + (i + 1) + '. ' + x[i] + '</b></li>';
+            }
+
+            list.innerHTML = tmp;
+        }
+
+
+        function addWork() {
+            var addWork = document.getElementById('addWork');
+            var content = addWork.value;
+            if (content != '') {
+                toDoList.push(content);
+            } else {
+                alert('Hãy thêm nội dung việc mới!');
+            }
+            render(toDoList);
+            addWork.value = '';
+        }
+        function removeItem(i) {
+            var dongy = confirm('Bạn có thực sự muốn xóa ?');
+            if (dongy) {
+                toDoList.splice(i, 1);
+                render(toDoList);
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
