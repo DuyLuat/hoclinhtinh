@@ -1,0 +1,24 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.red{
+   
+    background-color: red;
+}
+.blue{
+background-color: blue;
+}
+.green{
+    background-color: green;
+}
+.box{
+    width: 100px;
+    height: 100px;
+    color: white;
+}
+.fixed{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
