@@ -1,0 +1,44 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul li {
+    padding: 8px 16px;
+    list-style-type: none;
+    background-color: #ddd;
+}
+
+ul.menu>li {
+    list-style-type: none;
+    width: 110px;
+    font-size: 13px;
+    border: 1px #fff dotted;
+}
+
+ul li:hover, ul.submenu li:hover {
+    background-color: #EEE;
+}
+
+.has-menu {
+    position: relative;
+}
+
+.submenu {
+    position: absolute;
+    left: 100%;
+    display: none;
+    top: 0px;
+    width: 130px;
+}
+
+ul.submenu li {
+    background-color: #ddd;
+    border: 1px #fff dotted;
+    font-size: 13px;
+}
+
+.has-menu:hover .submenu {
+    display: block;
+}
