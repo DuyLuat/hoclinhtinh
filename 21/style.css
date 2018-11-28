@@ -1,0 +1,63 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #3e434c;
+}
+input:focus, input:active {
+	outline: none;
+}
+#login-form {
+    width: 480px;
+    height: 480px;
+    margin: 80px auto;
+    background-color: #f1f2f4;
+    text-align: center;
+    position: relative;
+    padding: 60px 30px 20px 30px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+#login-form img {
+    position: absolute;
+    top: -94px;
+    left: 37%;
+}
+
+#header-text {
+    margin-bottom: 25px;
+}
+
+#login-body input {
+    width: 100%;
+    display: block;
+    padding: 20px 45px;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+#password {
+    border-top: none;
+    border-radius: 0px 0px 5px 5px;
+    background: #e5e7e9 url('img/password-icon.png') no-repeat left 10px center;
+}
+#email{
+    border-radius: 5px 5px 0 0;
+    background: #e5e7e9 url('img/mail-icon.png') no-repeat left 10px center;
+
+}
+
+#login-body button {
+    margin-top: 30px;
+    background-color: #57c3b4;
+    display: block;
+    width: 100%;
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+    padding: 15px 20px;
+}
