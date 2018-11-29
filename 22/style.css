@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+}
+
+#content {
+    width: 399px;
+    margin: 60px auto;
+}
+
+#header {
+    background-color: cadetblue;
+    height: 30px;
+    width: 100%;
+}
+
+#header #name {
+    line-height: 30px;
+    display: block;
+    float: left;
+    padding-left: 20px;
+}
+
+#header #score {
+    line-height: 30px;
+    display: block;
+    float: right;
+    padding-right: 20px;
+}
+
+#body-form {
+    float: left;
+    display: block;
+}
+
+.btn_cell {
+    width: 133px;
+    height: 133px;
+    display: block;
+    background-color: aquamarine;
+    float: left;
+    border: 1px solid rebeccapurple;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.mystyle {
+    background-color: coral;
+}
+
+#play {
+    padding: 10px 15px;
+    display: block;
+    margin: 10px auto;
+}
