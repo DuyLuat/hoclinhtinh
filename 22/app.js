@@ -1,46 +1,53 @@
-var point = 0;
-function addCls(id) {
+
+function toMau(id) {
   var element = document.getElementById(id);
   element.classList.add("mystyle");
 }
 
-function removeCls(id) {
-  var element = document.getElementById(id);
+function xoaMau(id) {
+  setTimeout(function() {
+    var element = document.getElementById(id);
     element.classList.remove("mystyle");
+  }, 990);
+}
 
+function chonO() {
+  var tmp = Math.floor(Math.random() * 16);
+  var btn = "btn" + tmp;
+  return btn;
 }
-function clickbtn(id) {
-  var classNames = document.getElementById(id).className;
-  console.log(classNames);
-  return classNames;
-}
+
+var playGame = null;
+var point = 0;
+var tmp = 1;
 
 function play() {
-  var classNa;
-  var curClass='';
-
-   
-    setInterval(function() {
-        var tmp = Math.floor(Math.random() * 9);
-        var btn = "btn" + tmp;
-    
-      addCls(btn);
-
-      //classNa=clickbtn(btn);
-      //console.log(classNa);
-
-      // if (classNa == "mystyle") {
-      //   point++;
-      //   var result = document.getElementById("score");
-      //   var resulthtml = "Score: " + point;
-      //   result.innerText = resulthtml;
-      // } else {
-      //   alert("Hỏng rồi");
-      // }
-      //removeCls(btn);
+  var btn = document.getElementById("play");
+  if (tmp) {
+    playGame = setInterval(function toMauNgauNhien() {
+      var oToMau = chonO();
+      toMau(oToMau);
+      xoaMau(oToMau);
     }, 1000);
-    
-
-
-
+    btn.innerHTML = "Stop";
+    tmp = 0;
+  } else {
+    clearInterval(playGame);
+    btn.innerText = "Play";
+    tmp = 1;
+  }
 }
+
+function clickBtn(id) {
+  var element = document.getElementById(id);
+  var classNames = document.getElementById(id).className;
+
+  if (classNames === "btn_cell mystyle") {
+    point++;
+    element.classList.remove("mystyle");
+    var result = document.getElementById("score");
+    var resulthtml = "ĐIỂM: " + point;
+    result.innerText = resulthtml;
+  }
+}
+
